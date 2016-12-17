@@ -1,0 +1,6 @@
+framework module Pods_Music_SocialTests {
+  umbrella header "Pods-Music-SocialTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
