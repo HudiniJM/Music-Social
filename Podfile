@@ -11,6 +11,7 @@ target 'Music-Social' do
   	pod 'Firebase/Database'
   	pod 'Firebase/Storage'
     pod 'FBSDKLoginKit'
+    pod 'SwiftKeychainWrapper'
 
   target 'Music-SocialTests' do
     inherit! :search_paths

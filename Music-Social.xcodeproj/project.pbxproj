@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		493F3D1875FFEFBE54240487 /* Pods_Music_SocialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D913153DCBC4ABC40247E62 /* Pods_Music_SocialTests.framework */; };
 		5D0134C31E0827DA002CE3D1 /* SignInBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0134C21E0827DA002CE3D1 /* SignInBtn.swift */; };
+		5D24ED4B1E0D110C00D811C7 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24ED4A1E0D110C00D811C7 /* PostCell.swift */; };
 		5D2610C71E07BD2900FE94D1 /* fancyfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2610C61E07BD2900FE94D1 /* fancyfield.swift */; };
+		5D51B5051E0C344800034843 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51B5041E0C344800034843 /* CircleView.swift */; };
+		5D8AAA6F1E0A9E8B00334B6F /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8AAA6E1E0A9E8B00334B6F /* FeedVC.swift */; };
 		5DC1CB891E06DBC80028C964 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC1CB881E06DBC80028C964 /* TopView.swift */; };
 		5DC1CB8C1E06DCD00028C964 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC1CB8B1E06DCD00028C964 /* Constants.swift */; };
 		5DC1CB8E1E06E12D0028C964 /* RoundBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC1CB8D1E06E12D0028C964 /* RoundBTN.swift */; };
+		5DCB2A4C1E0D9695008A2374 /* dataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB2A4B1E0D9695008A2374 /* dataServices.swift */; };
 		5DD3030D1E052E33002FFFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD3030C1E052E33002FFFD5 /* AppDelegate.swift */; };
 		5DD3030F1E052E33002FFFD5 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD3030E1E052E33002FFFD5 /* SignInVC.swift */; };
 		5DD303121E052E33002FFFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD303101E052E33002FFFD5 /* Main.storyboard */; };
@@ -38,10 +42,14 @@
 		2BFB1D794272A74E247D6692 /* Pods_Music_Social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D485368AAC82175D46BE9BD /* Pods-Music-Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music-Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music-Social/Pods-Music-Social.debug.xcconfig"; sourceTree = "<group>"; };
 		5D0134C21E0827DA002CE3D1 /* SignInBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInBtn.swift; sourceTree = "<group>"; };
+		5D24ED4A1E0D110C00D811C7 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5D2610C61E07BD2900FE94D1 /* fancyfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fancyfield.swift; sourceTree = "<group>"; };
+		5D51B5041E0C344800034843 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		5D8AAA6E1E0A9E8B00334B6F /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		5DC1CB881E06DBC80028C964 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		5DC1CB8B1E06DCD00028C964 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5DC1CB8D1E06E12D0028C964 /* RoundBTN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBTN.swift; sourceTree = "<group>"; };
+		5DCB2A4B1E0D9695008A2374 /* dataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataServices.swift; sourceTree = "<group>"; };
 		5DD303091E052E32002FFFD5 /* Music-Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music-Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD3030C1E052E33002FFFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DD3030E1E052E33002FFFD5 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -95,6 +103,14 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		5DCB2A4A1E0D9674008A2374 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				5DCB2A4B1E0D9695008A2374 /* dataServices.swift */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
 		5DD1BCDB1E0531D80011AE46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +127,8 @@
 				5DC1CB8D1E06E12D0028C964 /* RoundBTN.swift */,
 				5D2610C61E07BD2900FE94D1 /* fancyfield.swift */,
 				5D0134C21E0827DA002CE3D1 /* SignInBtn.swift */,
+				5D51B5041E0C344800034843 /* CircleView.swift */,
+				5D24ED4A1E0D110C00D811C7 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -119,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				5DD3030E1E052E33002FFFD5 /* SignInVC.swift */,
+				5D8AAA6E1E0A9E8B00334B6F /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -153,6 +172,7 @@
 		5DD3030B1E052E32002FFFD5 /* Music-Social */ = {
 			isa = PBXGroup;
 			children = (
+				5DCB2A4A1E0D9674008A2374 /* services */,
 				5DC1CB8A1E06DCA30028C964 /* Util */,
 				5DD3030C1E052E33002FFFD5 /* AppDelegate.swift */,
 				5DD1BCDB1E0531D80011AE46 /* Model */,
@@ -391,13 +411,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D51B5051E0C344800034843 /* CircleView.swift in Sources */,
 				5D0134C31E0827DA002CE3D1 /* SignInBtn.swift in Sources */,
 				5DD3030F1E052E33002FFFD5 /* SignInVC.swift in Sources */,
 				5DC1CB891E06DBC80028C964 /* TopView.swift in Sources */,
 				5DD3030D1E052E33002FFFD5 /* AppDelegate.swift in Sources */,
+				5D8AAA6F1E0A9E8B00334B6F /* FeedVC.swift in Sources */,
+				5DCB2A4C1E0D9695008A2374 /* dataServices.swift in Sources */,
 				5DC1CB8C1E06DCD00028C964 /* Constants.swift in Sources */,
 				5D2610C71E07BD2900FE94D1 /* fancyfield.swift in Sources */,
 				5DC1CB8E1E06E12D0028C964 /* RoundBTN.swift in Sources */,
+				5D24ED4B1E0D110C00D811C7 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

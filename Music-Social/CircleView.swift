@@ -9,13 +9,9 @@
 import UIKit
 
 class CircleView: UIImageView {
+    
+    override func layoutSubviews() {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+        layer.cornerRadius = self.frame.width / 2
     }
-    */
-
 }
