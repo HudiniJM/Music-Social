@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		493F3D1875FFEFBE54240487 /* Pods_Music_SocialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D913153DCBC4ABC40247E62 /* Pods_Music_SocialTests.framework */; };
 		5D0134C31E0827DA002CE3D1 /* SignInBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0134C21E0827DA002CE3D1 /* SignInBtn.swift */; };
+		5D0BA3A91E0F065C009177A2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0BA3A81E0F065C009177A2 /* Post.swift */; };
 		5D24ED4B1E0D110C00D811C7 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24ED4A1E0D110C00D811C7 /* PostCell.swift */; };
 		5D2610C71E07BD2900FE94D1 /* fancyfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2610C61E07BD2900FE94D1 /* fancyfield.swift */; };
 		5D51B5051E0C344800034843 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D51B5041E0C344800034843 /* CircleView.swift */; };
@@ -42,6 +43,7 @@
 		2BFB1D794272A74E247D6692 /* Pods_Music_Social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D485368AAC82175D46BE9BD /* Pods-Music-Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music-Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music-Social/Pods-Music-Social.debug.xcconfig"; sourceTree = "<group>"; };
 		5D0134C21E0827DA002CE3D1 /* SignInBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInBtn.swift; sourceTree = "<group>"; };
+		5D0BA3A81E0F065C009177A2 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5D24ED4A1E0D110C00D811C7 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5D2610C61E07BD2900FE94D1 /* fancyfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fancyfield.swift; sourceTree = "<group>"; };
 		5D51B5041E0C344800034843 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		5DD1BCDB1E0531D80011AE46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5D0BA3A81E0F065C009177A2 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				5D51B5051E0C344800034843 /* CircleView.swift in Sources */,
 				5D0134C31E0827DA002CE3D1 /* SignInBtn.swift in Sources */,
 				5DD3030F1E052E33002FFFD5 /* SignInVC.swift in Sources */,
+				5D0BA3A91E0F065C009177A2 /* Post.swift in Sources */,
 				5DC1CB891E06DBC80028C964 /* TopView.swift in Sources */,
 				5DD3030D1E052E33002FFFD5 /* AppDelegate.swift in Sources */,
 				5D8AAA6F1E0A9E8B00334B6F /* FeedVC.swift in Sources */,
