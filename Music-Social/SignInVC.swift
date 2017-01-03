@@ -32,7 +32,7 @@ class SignInVC: UIViewController {
         
         let facebookLogin = FBSDKLoginManager()
         
-        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+        facebookLogin.logIn(withReadPermissions: ["email", "moblie number"], from: self) { (result, error) in
             if error != nil {
                 print("houdini: Unable to authenticate with Facebook - \(error)")
             } else if result?.isCancelled == true {
@@ -90,7 +90,7 @@ class SignInVC: UIViewController {
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
-        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        let keychainResult =  KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("Houdini: Data saved to keychain \(keychainResult)")
         performSegue(withIdentifier: "GoToFeed", sender: nil)
     }

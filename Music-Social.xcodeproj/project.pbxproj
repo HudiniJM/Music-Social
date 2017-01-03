@@ -63,6 +63,7 @@
 		5DD303211E052E33002FFFD5 /* Music_SocialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_SocialTests.swift; sourceTree = "<group>"; };
 		5DD303231E052E33002FFFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DD3032C1E052EE3002FFFD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5DEABDDB1E1A812A003C59FD /* Music-Social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Music-Social.entitlements"; sourceTree = "<group>"; };
 		73290497BF7627E2BF87A466 /* Pods-Music-Social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music-Social.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music-Social/Pods-Music-Social.release.xcconfig"; sourceTree = "<group>"; };
 		75C77A0055C83A1083AF2D25 /* Pods-Music-SocialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music-SocialTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music-SocialTests/Pods-Music-SocialTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E906687A0593E3B0774D6FC8 /* Pods-Music-SocialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music-SocialTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music-SocialTests/Pods-Music-SocialTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,11 +177,12 @@
 			isa = PBXGroup;
 			children = (
 				5DCB2A4A1E0D9674008A2374 /* services */,
+				5DEABDDB1E1A812A003C59FD /* Music-Social.entitlements */,
 				5DC1CB8A1E06DCA30028C964 /* Util */,
 				5DD3030C1E052E33002FFFD5 /* AppDelegate.swift */,
 				5DD1BCDB1E0531D80011AE46 /* Model */,
-				5DD1BCDC1E0531E00011AE46 /* View */,
 				5DD1BCDD1E0531E70011AE46 /* Controller */,
+				5DD1BCDC1E0531E00011AE46 /* View */,
 				5DD1BCDE1E0531F00011AE46 /* Resources */,
 				5DD303131E052E33002FFFD5 /* Assets.xcassets */,
 				5DD303181E052E33002FFFD5 /* Info.plist */,
@@ -267,6 +269,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = SM7APC4429;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					5DD3031C1E052E33002FFFD5 = {
 						CreatedOnToolsVersion = 8.1;
@@ -565,7 +572,12 @@
 			baseConfigurationReference = 3D485368AAC82175D46BE9BD /* Pods-Music-Social.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Music-Social/Music-Social.entitlements";
 				DEVELOPMENT_TEAM = SM7APC4429;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Music-Social",
+				);
 				INFOPLIST_FILE = "Music-Social/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Houdini.Music-Social";
@@ -579,7 +591,12 @@
 			baseConfigurationReference = 73290497BF7627E2BF87A466 /* Pods-Music-Social.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Music-Social/Music-Social.entitlements";
 				DEVELOPMENT_TEAM = SM7APC4429;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Music-Social",
+				);
 				INFOPLIST_FILE = "Music-Social/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Houdini.Music-Social";
