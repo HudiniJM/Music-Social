@@ -14,10 +14,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdded: CircleView!
+    @IBOutlet weak var captionField: fancyfield!
   
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +77,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
             imageAdded.image = image
+            imageSelected = true
         } else {
             print("Houdini: A Valid image wasn't selected")
         }
@@ -84,7 +87,50 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBAction func addImageTapped(_ sender: AnyObject) {
         present(imagePicker, animated: true, completion: nil)
     }
+    @IBAction func postBtnTapped(_ sender: Any) {
+        guard let caption = captionField.text, caption != "" else {
+            print("Houdini: Caption Must be Entered")
+            return
+        }
+        guard let img = imageAdded.image, imageSelected == true else {
+            print("Houdini: An image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imgUid = NSUUID().uuidString
+            let mataData = FIRStorageMetadata()
+            mataData.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMG.child(imgUid).put(imgData, metadata: mataData) { (metadata, error) in
+                if error != nil {
+                    print("Houdini: Unable to upload to Firebase storage")
+                } else {
+                    print("Houdini: Successfully uploaded image to Firebase storage")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadURL {
+                        self.postToFirebase(imgUrl: url)
+                }
+            }
+        }
+    }
+}
+    func postToFirebase(imgUrl: String) {
+        let post: Dictionary<String, AnyObject> = [
+            "caption": captionField.text as AnyObject,
+            "imageUrl": imgUrl as AnyObject,
+            "likes": 0 as AnyObject
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
     
+        //clean up
+        captionField.text = ""
+        imageSelected = false
+        imageAdded.image = UIImage(named: "add-image")
+    }
     
     @IBAction func signOutTapped(_ sender: AnyObject) {
 //        let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
